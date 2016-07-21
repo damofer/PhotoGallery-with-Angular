@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8" name="viewport" content="width=device-width, height=device-height,initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<title>Ideaware</title>
+<link rel="StyleSheet" href="build/css/animate.min.css" />
+<link rel="StyleSheet" href="build/css/main.css" />
+</head>
+<body>
+<div id="wrapper">
+	<div id="header"><!-- HEADER -->
+		<h1  class ="logo"></h1>
+		<div class ="nav"><!-- nav -->
+			<a class="nav__burger"></a>
+			<ul class="nav__list">
+				<li class ="nav__item"><a href="">Work</a></li>
+				<li class ="nav__item"><a href="">About Us</a></li>
+				<li class ="nav__item"><a href="">Contact</a></li>
+			</ul>
+		</div>
+
+		<div class="banner slider"><!-- BANNER -->
+			<div class="banner__dot"><i class="banner__dot--one"></i></div>
+			<div class="banner__dot"><i class="banner__dot--two"></i></div>
+			<div class="banner__dot"><i class="banner__dot--three"></i></div>
+
+			<!-- //First Slide -->
+			<div class="banner__img ">
+				<img class="banner__img--pc"src="img/displays1.png" alt="">
+			</div>
+
+			<div class="banner__content ">
+				<h1 class="banner__content__title"> <span>Sed do eiusmod</span> tempor incididunt</h1>
+				<div class="banner__content__subtitle">Sed do eiusmod tempor incididunt</div>
+
+
+			</div>
+			<!-- //Second Slide -->
+			<div class="banner__img hidden">
+				<img class="banner__img--pc"src="img/displays2.png" alt="">
+			</div>
+
+			<div class="banner__content hidden ">
+				<h1 class="banner__content__title"> <span>Et dolore magna</span> aliqua ut enim ad</h1>
+				<div class="banner__content__subtitle">Nisi ut aliquip ex commodo consequat</div>
+
+
+			</div>
+		</div><!-- END OF BANNER -->
+
+	</div>
+	<div id="content" ng-app ="app"><!-- MAIN CONTENT -->
+
+		<div class="content__text"><!-- 1ST ITEM -->
+			<h1>Lorem ipsum dolor</h1>
+			<p>
+
+			Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+
+
+			</p>
+		</div>
+		<div class="searchbar"><!-- 2ND ITEM -->
+			<div class="searchbar__container">
+		    	<div  class="searchbar__box">
+					<span class="searchbar__iconBox"><i class="searchbar__icon"></i></span>
+					<form class="searchbar__box__form">
+						<input class="searchbar__box__input" type="text" id="search" placeholder="Search"ng-model="search" />
+					</form>
+				</div>
+			</div>
+			<div class="searchbar__filter">
+				<p class="searchbar__filter__label">Filter By </p>
+				<select class="searchbar__filter__dropdown" ng-model="sortBy">
+					<option value="name">Name</option>
+					<option value="year">Recent</option>
+				</select>
+			</div>
+			</div>
+			<div class="content__media" >
+		<ul class="gallery"  ng-controller ="mediaController"><!-- GALLERY -->
+			<li class="photo_box animated fadeInDown" ng-repeat="photo in photos |filter:search | orderBy: sortBy ">
+
+			        <img class="photo" src="{{photo.img}}" alt="">
+
+
+			</li>
+		</ul>
+		</div>
+	</div><!-- END OF CONTENT -->
+	<div id="footer"><!-- FOOTER -->
+
+		<div class ="footer__social">
+			<h3>contact us</h3>
+			<h1>contact@ideaware.co</h1>
+			<ul class="footer__social__iconList">
+				<li class="footer__social__icon"><img src="img/social/facebook.png" alt=""></li>
+				<li class="footer__social__icon"><img src="img/social/twitter.png" alt=""></li>
+				<li class="footer__social__icon"><img src="img/social/youtube.png" alt=""></li>
+			</ul>
+		</div>
+	</div><!-- END of FOOTER -->
+</div>
+<script type="text/javascript" src="js/jquery-min.js"></script>
+<script type="text/javascript" src="js/angular.min.js"></script>
+<script type="text/javascript" src="js/slider.js"></script>
+<script type="text/javascript" src="js/menu.js"></script>
+<script type="text/javascript" src="js/mediafeed.js"></script>
+
+
+</body>
+</html>

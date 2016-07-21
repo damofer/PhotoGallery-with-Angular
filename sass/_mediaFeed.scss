@@ -1,0 +1,76 @@
+/*MEDIA FEEDS*/
+
+.gallery{
+	margin-top: 120px;
+	margin-bottom: 1em;
+
+	@include center();
+	@media #{$mobile}{
+	margin-top: 5em;
+
+	text-align: center;
+	}
+}
+
+.photo_box{
+	text-align: center;
+	display: inline-block;
+	 width: 30%;
+	 margin: 3px;
+	 width: 301px ;
+	 height: 217px ;
+		@media #{$mobile}{
+		display: inline-block;
+		text-align:center;
+			width: 301px !important;
+			height: 217px !important;
+		@include center();
+
+	  	}
+		@media #{$tablet}{
+		display: inline-block;
+		@include center();
+	  	width: 50%;}
+
+&:nth-last-child(3){
+
+			width: 604px;
+			height: 440px;
+			.photo{
+				width: 604px!important;
+				height: 440px!important;
+			}
+			@media #{$desktop}{
+				float:left;}
+			@media #{$tablet}{
+				max-width: 100%;
+				width:100%;
+			}
+			@media #{$mobile}{
+
+				.photo{
+				width: 301px!important;
+				height: 217px!important;
+					}
+			}
+
+
+
+		}
+// &:nth-last-child(1){
+
+// 			width: 30%;
+// 			margin: 2.25% 2%;
+// 			float: right;
+// 		}
+	}
+
+.photo{
+
+width: 301px !important;
+height: 217px !important;
+@include center();
+
+
+
+}

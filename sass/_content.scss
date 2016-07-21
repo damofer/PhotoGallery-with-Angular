@@ -1,0 +1,55 @@
+/*CONTENT*/
+
+#content{
+
+
+
+display: block;
+max-width: $content-max-width;
+width: 96%;
+
+margin: auto;
+
+
+ padding-top: 5em;
+
+
+}
+
+
+.content__text{
+      font-family: $main-font;
+
+    h1{
+     font-weight: bolder;
+     font-size: 33px;
+     margin-bottom: 0.5em;
+     opacity: 0.6;
+    @media #{$mobile}{text-align:center;}
+
+
+    }
+    p{
+
+    font-size: 16.8px;
+    margin-top: 0;
+    line-height: 2;
+    text-align: justify;
+
+    -webkit-text-stroke-color: rgb(255,255,255);
+    -webkit-text-stroke-width: 0;
+    -webkit-font-smoothing: antialiased;
+
+
+
+    }
+    a{
+    text-decoration: none;
+    color: red;
+    font-weight: 600;
+    margin-bottom: 2px;
+    }
+}
+
+
+

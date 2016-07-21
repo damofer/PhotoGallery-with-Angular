@@ -1,0 +1,23 @@
+// General variables
+@import url(https://fonts.googleapis.com/css?family=Roboto:100);
+@font-face {
+    font-family: SakkalMajalla;
+    src: url(font/majalla.ttf);
+}
+$main-font: 'Roboto', sans-serif;
+$banner-max-height:400px;
+$content-margin: 100px;
+$desktop-max-width: 1200px;
+$content-max-width: 1000px;
+
+	$mobile: "handheld,screen and (max-width:600px)";
+	$tablet: "only screen and (min-width: 601px) and (max-width: 979px)";
+	$desktop: "only screen and (min-width: 980px)";
+
+@mixin center() {
+ width:100%;
+ margin-left:auto;
+ margin-right:auto;
+}
+
+
